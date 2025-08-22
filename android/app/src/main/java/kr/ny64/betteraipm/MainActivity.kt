@@ -1,4 +1,4 @@
-package com.betteraipm
+package kr.ny64.betteraipm
 
 import android.os.Build
 import android.os.Bundle

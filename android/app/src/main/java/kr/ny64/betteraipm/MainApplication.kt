@@ -1,4 +1,4 @@
-package com.betteraipm
+package kr.ny64.betteraipm
 
 import android.app.Application
 import android.content.res.Configuration
