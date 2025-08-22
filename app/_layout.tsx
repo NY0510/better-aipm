@@ -11,14 +11,14 @@ SplashScreen.preventAutoHideAsync();
 
 const RootLayout = () => {
   const [loaded, error] = useFonts({
-    SuitBold: require('assets/fonts/SUIT-Bold.ttf'),
-    SuitExtraBold: require('assets/fonts/SUIT-ExtraBold.ttf'),
-    SuitExtraLight: require('assets/fonts/SUIT-ExtraLight.ttf'),
     SuitHeavy: require('assets/fonts/SUIT-Heavy.ttf'),
-    SuitLight: require('assets/fonts/SUIT-Light.ttf'),
+    SuitExtraBold: require('assets/fonts/SUIT-ExtraBold.ttf'),
+    SuitBold: require('assets/fonts/SUIT-Bold.ttf'),
+    SuitSemiBold: require('assets/fonts/SUIT-SemiBold.ttf'),
     SuitMedium: require('assets/fonts/SUIT-Medium.ttf'),
     SuitRegular: require('assets/fonts/SUIT-Regular.ttf'),
-    SuitSemiBold: require('assets/fonts/SUIT-SemiBold.ttf'),
+    SuitLight: require('assets/fonts/SUIT-Light.ttf'),
+    SuitExtraLight: require('assets/fonts/SUIT-ExtraLight.ttf'),
     SuitThin: require('assets/fonts/SUIT-Thin.ttf'),
   });
 
@@ -36,8 +36,8 @@ const RootLayout = () => {
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <StatusBar style="dark" />
       <SafeAreaView style={{flex: 1, backgroundColor: colors.background}}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{headerShown: false}} />
+        <Stack screenOptions={{contentStyle: {backgroundColor: colors.background}}}>
+          <Stack.Screen name="index" options={{headerShown: false}} />
         </Stack>
       </SafeAreaView>
     </SafeAreaProvider>
