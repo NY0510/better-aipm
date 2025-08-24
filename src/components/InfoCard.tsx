@@ -2,20 +2,20 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
 import Card from '@/components/Card';
-import colors from '@/theme/colors';
+import colors from '@/styles/theme/colors';
 
 export default function InfoCard({title, value, unit}: {title: string; value: string | number; unit: string}) {
   return (
-    <Card title={title} titleStyle={styles.infoTitle} style={styles.infoCard}>
-      <View style={styles.infoContent}>
-        <Text style={styles.infoValue}>{value}</Text>
-        <Text style={styles.infoUnit}>{unit}</Text>
+    <Card title={title} titleStyle={s.infoTitle} style={s.infoCard}>
+      <View style={s.infoContent}>
+        <Text style={s.infoValue}>{value}</Text>
+        <Text style={s.infoUnit}>{unit}</Text>
       </View>
     </Card>
   );
 }
 
-const styles = StyleSheet.create({
+const s = StyleSheet.create({
   infoTitle: {
     fontSize: 16,
   },

@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, ViewStyle} from 'react-native';
 
-import colors from '@/theme/colors';
+import colors from '@/styles/theme/colors';
 
 interface CardProps {
   title?: string;
@@ -12,14 +12,14 @@ interface CardProps {
 
 export default function Card({title, titleStyle, children, style}: CardProps) {
   return (
-    <View style={[styles.container, {...style}]}>
-      {title && <Text style={[styles.title, {...titleStyle}]}>{title}</Text>}
+    <View style={[s.container, {...style}]}>
+      {title && <Text style={[s.title, {...titleStyle}]}>{title}</Text>}
       {children}
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const s = StyleSheet.create({
   container: {
     paddingHorizontal: 18,
     paddingVertical: 20,
