@@ -1,34 +1,10 @@
-import {LinearGradient} from 'expo-linear-gradient';
-import {Fragment, useEffect, useState} from 'react';
-import {ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {LineChart} from 'react-native-gifted-charts';
+import {useEffect, useState} from 'react';
+import {ScrollView, StyleSheet, View} from 'react-native';
 
-import Card from '@/components/Card';
+import Header from '@/components/Header';
+import InfoCard from '@/components/InfoCard';
 import PowerCard from '@/components/PowerCard';
 import colors from '@/theme/colors';
-import {MaterialIcons} from '@expo/vector-icons';
-
-function InfoCard({title, value, unit}: {title: string; value: string | number; unit: string}) {
-  return (
-    <Card title={title} titleStyle={styles.infoTitle} style={styles.infoCard}>
-      <View style={styles.infoContent}>
-        <Text style={styles.infoValue}>{value}</Text>
-        <Text style={styles.infoUnit}>{unit}</Text>
-      </View>
-    </Card>
-  );
-}
-
-function Header() {
-  return (
-    <View style={styles.header}>
-      <Text style={styles.headerTitle}>MahiroLab</Text>
-      <TouchableOpacity onPress={() => console.log('Settings pressed')} activeOpacity={0.7}>
-        <MaterialIcons name="settings" size={24} color={colors.text} />
-      </TouchableOpacity>
-    </View>
-  );
-}
 
 export default function Index() {
   const [currentWh, setCurrentWh] = useState(82);
@@ -82,18 +58,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginVertical: 15,
-    paddingHorizontal: 20,
-  },
-  headerTitle: {
-    fontSize: 22,
-    fontFamily: 'SuitSemiBold',
-    color: colors.text,
-  },
   scrollView: {
     paddingVertical: 4,
     flex: 1,
@@ -106,29 +70,5 @@ const styles = StyleSheet.create({
   gridRow: {
     flexDirection: 'row',
     gap: 10,
-  },
-  infoTitle: {
-    fontSize: 16,
-  },
-  infoCard: {
-    justifyContent: 'space-between',
-  },
-  infoContent: {
-    flexDirection: 'row',
-    alignItems: 'baseline',
-    flexWrap: 'wrap',
-    gap: 2,
-  },
-  infoValue: {
-    fontSize: 30,
-    letterSpacing: -1.5,
-    fontVariant: ['tabular-nums'],
-    fontFamily: 'SuitBold',
-    color: colors.text,
-  },
-  infoUnit: {
-    fontSize: 20,
-    fontFamily: 'SuitRegular',
-    color: colors.text,
   },
 });
