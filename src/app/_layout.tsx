@@ -5,21 +5,21 @@ import {StatusBar} from 'expo-status-bar';
 import {useEffect} from 'react';
 import {SafeAreaInsetsContext, SafeAreaProvider, SafeAreaView, initialWindowMetrics, useSafeAreaInsets} from 'react-native-safe-area-context';
 
-import colors from 'theme/colors';
+import colors from '@/theme/colors';
 
 SplashScreen.preventAutoHideAsync();
 
 const RootLayout = () => {
   const [loaded, error] = useFonts({
-    SuitHeavy: require('assets/fonts/SUIT-Heavy.ttf'),
-    SuitExtraBold: require('assets/fonts/SUIT-ExtraBold.ttf'),
-    SuitBold: require('assets/fonts/SUIT-Bold.ttf'),
-    SuitSemiBold: require('assets/fonts/SUIT-SemiBold.ttf'),
-    SuitMedium: require('assets/fonts/SUIT-Medium.ttf'),
-    SuitRegular: require('assets/fonts/SUIT-Regular.ttf'),
-    SuitLight: require('assets/fonts/SUIT-Light.ttf'),
-    SuitExtraLight: require('assets/fonts/SUIT-ExtraLight.ttf'),
-    SuitThin: require('assets/fonts/SUIT-Thin.ttf'),
+    SuitHeavy: require('@/assets/fonts/SUIT-Heavy.ttf'),
+    SuitExtraBold: require('@/assets/fonts/SUIT-ExtraBold.ttf'),
+    SuitBold: require('@/assets/fonts/SUIT-Bold.ttf'),
+    SuitSemiBold: require('@/assets/fonts/SUIT-SemiBold.ttf'),
+    SuitMedium: require('@/assets/fonts/SUIT-Medium.ttf'),
+    SuitRegular: require('@/assets/fonts/SUIT-Regular.ttf'),
+    SuitLight: require('@/assets/fonts/SUIT-Light.ttf'),
+    SuitExtraLight: require('@/assets/fonts/SUIT-ExtraLight.ttf'),
+    SuitThin: require('@/assets/fonts/SUIT-Thin.ttf'),
   });
 
   useEffect(() => {
