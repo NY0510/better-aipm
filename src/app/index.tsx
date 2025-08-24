@@ -4,7 +4,7 @@ import {ScrollView, StyleSheet, View} from 'react-native';
 import Header from '@/components/Header';
 import InfoCard from '@/components/InfoCard';
 import PowerCard from '@/components/PowerCard';
-import colors from '@/theme/colors';
+import gs from '@/styles/global';
 
 export default function Index() {
   const [currentWh, setCurrentWh] = useState(82);
@@ -26,25 +26,25 @@ export default function Index() {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <View style={gs.container}>
       <Header />
 
-      <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+      <ScrollView style={gs.scrollView} contentContainerStyle={s.scrollContent} showsVerticalScrollIndicator={false}>
         <PowerCard currentWh={currentWh} data={chartData} />
 
         {/* <Card variant="default"></Card> */}
 
-        <View style={styles.gridRow}>
+        <View style={s.gridRow}>
           <InfoCard title="오늘 사용량" value={245} unit="Wh" />
           <InfoCard title="이번 달 사용량" value={45.7} unit="kWh" />
         </View>
 
-        <View style={styles.gridRow}>
+        <View style={s.gridRow}>
           <InfoCard title="평균 소비전력" value={65} unit="Wh" />
           <InfoCard title="최대 소비전력" value={125} unit="Wh" />
         </View>
 
-        <View style={styles.gridRow}>
+        <View style={s.gridRow}>
           <InfoCard title="장치 내부온도" value={51} unit="°C" />
           <InfoCard title="월간 누적 요금" value="15,420" unit="원" />
         </View>
@@ -53,18 +53,8 @@ export default function Index() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.background,
-  },
-  scrollView: {
-    paddingVertical: 4,
-    flex: 1,
-  },
+const s = StyleSheet.create({
   scrollContent: {
-    paddingHorizontal: 20,
-    paddingBottom: 20,
     gap: 14,
   },
   gridRow: {
