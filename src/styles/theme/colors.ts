@@ -12,5 +12,9 @@ export default {
   border: '#e5e5e5',
   card: '#F8F8F8',
   text: '#333333',
+  textSecondary: '#666666',
   primary: '#c17aff',
+  secondary: '#327a88',
+  success: '#22c55e',
+  danger: '#ef4444',
 };

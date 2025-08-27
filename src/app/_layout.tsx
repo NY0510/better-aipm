@@ -36,8 +36,9 @@ const RootLayout = () => {
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <StatusBar style="dark" />
       <SafeAreaView style={{flex: 1, backgroundColor: colors.background}}>
-        <Stack screenOptions={{contentStyle: {backgroundColor: colors.background}}}>
-          <Stack.Screen name="index" options={{headerShown: false}} />
+        <Stack screenOptions={{contentStyle: {backgroundColor: colors.background}, headerShown: false}}>
+          <Stack.Screen name="index" />
+          <Stack.Screen name="onboarding" />
         </Stack>
       </SafeAreaView>
     </SafeAreaProvider>
